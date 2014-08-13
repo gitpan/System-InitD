@@ -26,4 +26,4 @@ requires:
   File::ShareDir: 0
   File::ShareDir::Install: 0
   perl: 5.006
-version: 1.13
+version: 1.14
