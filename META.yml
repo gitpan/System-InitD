@@ -18,7 +18,7 @@ configure_requires:
   System::Process: 0.15
   Time::HiRes: 0
 dynamic_config: 1
-generated_by: 'ExtUtils::MakeMaker version 6.86, CPAN::Meta::Converter version 2.133380'
+generated_by: 'ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.133380'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -36,4 +36,4 @@ requires:
   System::Process: 0.15
   Time::HiRes: 0
   perl: 5.006
-version: 1.15
+version: 1.16
