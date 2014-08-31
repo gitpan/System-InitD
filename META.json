@@ -1,10 +1,10 @@
 {
-   "abstract" : "unknown",
+   "abstract" : "Little framework for init.d scripts creation and manipulation.",
    "author" : [
-      "Shamatrin D."
+      "Shamatrin Dmitriy"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.133380",
+   "generated_by" : "ExtUtils::MakeMaker version 6.86, CPAN::Meta::Converter version 2.133380",
    "license" : [
       "perl_5"
    ],
@@ -34,7 +34,8 @@
       "configure" : {
          "requires" : {
             "File::ShareDir" : "0",
-            "File::ShareDir::Install" : "0"
+            "File::ShareDir::Install" : "0",
+            "System::Process" : "0.15"
          }
       },
       "runtime" : {
@@ -47,8 +48,25 @@
             "Time::HiRes" : "0",
             "perl" : "5.006"
          }
+      },
+      "test" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0",
+            "File::ShareDir" : "0",
+            "File::ShareDir::Install" : "0",
+            "POSIX" : "0",
+            "System::Process" : "0.15",
+            "Time::HiRes" : "0"
+         }
       }
    },
    "release_status" : "stable",
-   "version" : "1.19"
+   "resources" : {
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/justnoxx/system-initd",
+         "web" : "https://github.com/justnoxx/system-initd.git"
+      }
+   },
+   "version" : "1.20"
 }
