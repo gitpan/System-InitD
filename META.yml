@@ -35,4 +35,4 @@ requires:
   perl: 5.006
 resources:
   repository: https://github.com/justnoxx/system-initd.git
-version: 1.22
+version: 1.23
