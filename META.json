@@ -4,7 +4,7 @@
       "Shamatrin Dmitriy"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.133380",
+   "generated_by" : "ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.142690",
    "license" : [
       "perl_5"
    ],
@@ -27,5 +27,5 @@
          "web" : "https://github.com/justnoxx/system-initd"
       }
    },
-   "version" : "1.25"
+   "version" : "1.26"
 }
