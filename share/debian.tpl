@@ -35,8 +35,6 @@ my $START_COMMAND   = "[% start_cmd %]";
 my $PROCESS_NAME    = '[% process_name %]';
 my $USAGE           = 'start|stop|usage|status|info';
 
-my $USER            = '[% user %]';
-
 # Run
 my $runner = System::InitD::Runner->new(
     usage               =>  $USAGE,
@@ -46,7 +44,7 @@ my $runner = System::InitD::Runner->new(
     start               =>  $START_COMMAND,
     restart_timeout     =>  5,
     pid_file            =>  $PID,
-    user                =>  $USER,
+    user                =>  '[% user %]',
 );
 
 $runner->run();

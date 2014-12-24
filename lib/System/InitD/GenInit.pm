@@ -18,15 +18,6 @@ sub run {
 
     $self->parse_args();
     
-    if (!$self->{options}->{provides}) {
-        $self->ask('provides', "Which service this script provides?");
-    }
-
-    if (!$self->{options}->{provides}) {
-        print "Missing provides section.";
-        exit 1;
-    }
-
     eval {
         my $os = ucfirst lc $self->{options}->{os};
 
@@ -59,13 +50,12 @@ sub parse_args {
         service         =>  'system_initd_script',
         description     =>  '',
         user            =>  '',
-        bare            =>  0,
     };
 
     GetOptions(
         'os=s'              =>    \$opts->{os},
         'target=s'          =>    \$opts->{target},
-        'author=s'          =>    \$opts->{author},
+        "author=s"          =>    \$opts->{author},
         'pid-file=s'        =>    \$opts->{pid_file},
         'pid_file=s'        =>    \$opts->{pid_file},
         'pidfile=s'         =>    \$opts->{pid_file},
@@ -77,7 +67,6 @@ sub parse_args {
         'service=s'         =>    \$opts->{service},
         'description=s'     =>    \$opts->{description},
         'user=s'            =>    \$opts->{user},
-        'bare'              =>    \$opts->{bare},
     );
 
     if (scalar @ARGV == 1 && !$self->{options}->{target}) {
@@ -87,19 +76,6 @@ sub parse_args {
     return 1;
 }
 
-sub ask {
-    my ($self, $field, $question) = @_;
-
-    print $question . ' > ';
-    my $res = <STDIN>;
-    chomp $res;
-    if (!$res || $res =~ m/^\s+$/s) {
-        return $self->ask($field, $question);
-    }
-    $self->{options}->{$field} = $res;
-
-    return 1;
-}
 
 1;
 

@@ -265,12 +265,7 @@ sub is_alive {
     my $self = shift;
     return 0 unless $self->{pid};
 
-    if ($self->{_args}->{process_name}) {
-        return 1 if $self->{pid}->command() && $self->{pid}->command() eq $self->{_args}->{process_name};
-    }
-    else {
-        return 1 if $self->{pid}->command();
-    }
+    return 1 if $self->{_args}->{process_name} eq $self->{pid}->command() && $self->{pid}->cankill();
 
     return 0;
 }
