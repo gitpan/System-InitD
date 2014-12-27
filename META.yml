@@ -16,4 +16,4 @@ no_index:
     - inc
 resources:
   repository: https://github.com/justnoxx/system-initd.git
-version: '1.28'
+version: '1.29'
